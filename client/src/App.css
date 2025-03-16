@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  color: #333;
+  font-family: "Optimistic Text Normal", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Outfit", "Roboto", sans-serif;
+  line-height: 1.5;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
+  min-height: 100dvh;
+  /* display: none; */
+}
+
+
+#background {
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    radial-gradient(
+      rgb(255, 209, 82) 30%,
+      rgb(226, 105, 150),
+      rgba(226, 105, 150, 0.4) 41%,
+      transparent 52%
+    ),
+    radial-gradient(rgb(160, 51, 255) 37%, transparent 46%),
+    linear-gradient(155deg, transparent 65%, rgb(37, 212, 102) 95%),
+    linear-gradient(45deg, rgb(0, 101, 224), rgb(15, 139, 255));
+  background-position: left bottom, 109% 68%, 109% 68%, center center,
+    center center;
+  background-repeat: no-repeat;
+  background-size: 200% 200%, 285% 500%, 285% 500%, cover, cover;
+  inset: 0px;
+  opacity: 0.08;
+  pointer-events: none;
+  position: absolute;
+}
+
+
+.app {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .app {
+    display: flex;
+  }
+}
+
+
+.desktop-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Hide desktop message on mobile */
+@media only screen and (max-width: 767px) {
+  .desktop-message {
+    display: none;
+  }
+}

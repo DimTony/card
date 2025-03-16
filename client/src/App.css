@@ -51,18 +51,18 @@ body {
 
 
 .app {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (max-width: 767px) {
   .app {
-    display: flex;
+    display: flex !important;
   }
 }
 
 
 .desktop-message {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -74,6 +74,6 @@ body {
 /* Hide desktop message on mobile */
 @media only screen and (max-width: 767px) {
   .desktop-message {
-    display: none;
+    display: none !important;
   }
 }

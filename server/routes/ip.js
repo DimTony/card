@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const ipController = require("../controllers/ipController");
+const cipherKeyController = require("../controllers/cipherKeyController");
 const { upload } = require("../config/cloudinary");
 
 // Check if an IP is encrypted (gets status from DB)
@@ -27,5 +28,16 @@ router.get("/stats", ipController.getStats);
 
 // Get pending encryption requests
 router.get("/pending-requests", ipController.getPendingRequests);
+
+/**
+ * @route POST /api/store-cipher-key
+ * @desc Store a cipher key
+ * @access Public
+ */
+router.post(
+  "/store-cipher-key",
+//   storeCipherKeyValidation,
+  cipherKeyController.storeCipherKey
+);
 
 module.exports = router;
